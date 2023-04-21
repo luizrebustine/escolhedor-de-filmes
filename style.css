@@ -1,8 +1,154 @@
-#capafilme{
-    width: 300px;
-    height: 400px;
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --fontpadrao:'Montserrat', sans-serif;
 }
-#capafilme img{
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--fontpadrao);
+}
+body{
+    height: 100vh;
+}
+/*Header*/
+header{
+    height: 10vh;
+    background-color: rgb(29, 29, 29);
+}
+#itemheader{
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    min-width: 280px;
+    margin: auto;
+    justify-content: space-between;
+}
+#itemheader a{
+    font: 550 3em var(--fontpadrao);
+    color: white;
+    text-decoration: none;
+}
+.modoescuro{
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.modoescuro label{
+    color: white;
+    font-size: 1.3em;
+}
+#divmenuicone{
+    width: 25px;
+    display: none;
+}
+#divmenuicone img{
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(26, 26, 26);
+    display: none;
+}
+.hide{
+    display: none;
+}
+/*Corpo*/
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-color: white;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#divcapafilme{
+    max-width: 400px;
+    max-height: 550px;
+}
+#divcapafilme img{
     width: 100%;
     height: 100%;
+}
+.capafilme{
+    filter: blur(2px);
+}
+#nomefilme{
+    text-align: center;
+    padding: 14px;
+    font: 400 1.5em var(--fontpadrao);
+    background-color: rgba(0, 136, 255, 0);
+}
+#divbotoes{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.botao{
+    padding: 10px;
+    width: 190px;
+    font-size: 1.4em;
+    background-color: rgb(230, 46, 86);
+    cursor: pointer;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 3px 2px 1px #00000063;
+}
+.escuro{
+    background-color: rgb(43, 41, 41);
+    color: white;
+}
+@media(max-width:600px){
+    #itemheader a{
+        font-size: 8.5vw;
+    }
+    .modoescuro{
+        display: none;
+    }
+    #divmenuicone{
+        display: block;
+    }
+    #divmenuicone img{
+        display: block;
+    }
+    main{
+        align-items: start;
+    }
+    #container{
+        width: 67vw;
+        margin-top: 8vh;
+    }
+    #divbotoes{
+        min-width: none;
+    }
+    .botao{
+        width: 32vw;
+    }
+
+}
+@media(max-width:400px){
+    .botao{
+        font-size: 6vw;
+    }
+}
+.show{
+    display: block;
+}
+.showmodoescuro{
+    position: fixed;
+    top: 92.5px;
+    right: 10px;
+    z-index: 90;
+    display: flex;
 }
