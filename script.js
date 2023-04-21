@@ -23,7 +23,7 @@ else{
 switchmodoescuro.addEventListener('change', ()=>{
     vetormodoescuro.forEach((el) => el.classList.toggle('escuro'))
 })
-const filmes = ['procurando_nemo','toy_story_3','toy_story_1','a_viagem_de_chihiro']
+const filmes = ['procurando_nemo','toy_story','a_viagem_de_chihiro','ratatouille','madagascar','divertidamente','penguins_de_madagascar','a_era_do_gelo','rio_2']
 const i = () =>{
     return Math.floor(Math.random() * filmes.length)
 }
