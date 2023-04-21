@@ -38,7 +38,7 @@ botaoiniciar.addEventListener('click', () => {
         segundos++
         if(segundos == 50){
             clearInterval(intervalo)
-        }},100)
+        }},250)
 })
 botaoparar.addEventListener('click', () =>{
     clearInterval(intervalo)
